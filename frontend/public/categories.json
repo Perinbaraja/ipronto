@@ -1,0 +1,87 @@
+{
+    "outing_count": 160413,
+    "destination_count": 8684,
+    "experience_count": 177550,
+    "event_count": 288538,
+    "categories": [
+        {
+            "category_id": "activities",
+            "name": "Activities",
+            "image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/event-categories/activities.jpg",
+            "color_code": "#fe7e39",
+            "dev_image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/activities.svg",
+            "event_count": 2024,
+            "counts": 2024
+        },
+        {
+            "category_id": "adventures",
+            "name": "Adventures",
+            "image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/event-categories/adventure.jpg",
+            "color_code": "#008000",
+            "dev_image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/adventure.svg",
+            "event_count": 9208,
+            "counts": 9208
+        },
+        {
+            "category_id": "liveshows",
+            "name": "Live Shows",
+            "image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/event-categories/live-shows.jpg",
+            "color_code": "#1809ad",
+            "dev_image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/live-shows.svg",
+            "event_count": 117374,
+            "counts": 68244
+        },
+        {
+            "category_id": "musicandconcerts",
+            "name": "Music / Concerts",
+            "image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/event-categories/music.jpg",
+            "color_code": "#ff00ff",
+            "dev_image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/music.svg",
+            "event_count": 73925,
+            "counts": 45754
+        },
+        {
+            "category_id": "others",
+            "name": "Others",
+            "image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/event-categories/other-events.jpg",
+            "color_code": "#ff0000",
+            "dev_image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/other-events.svg",
+            "event_count": 5476,
+            "counts": 4847
+        },
+        {
+            "category_id": "professionalsports",
+            "name": "Sports",
+            "image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/event-categories/basketball.jpg",
+            "color_code": "#971a37",
+            "dev_image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/Sports.svg",
+            "event_count": 52882,
+            "counts": 19824
+        },
+        {
+            "category_id": "tours",
+            "name": "Tours",
+            "image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/event-categories/tours.jpg",
+            "color_code": "#000000",
+            "dev_image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/categories/tours.svg",
+            "event_count": 27649,
+            "counts": 27649
+        }
+    ],
+    "personalised": [
+        {
+            "category_id": "whatsnew",
+            "name": "What's New",
+            "image": "https://public-pronto.s3.us-west-2.amazonaws.com/assets/whats-new.png",
+            "dev_image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/personalized/What's+New.svg",
+            "counts": 341
+        },
+        {
+            "category_id": "upcomingEvents",
+            "name": "Upcoming",
+            "image": "https://public-pronto.s3.us-west-2.amazonaws.com/assets/upcoming.png",
+            "dev_image": "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/personalized/upcoming+events.svg",
+            "counts": 10019
+        }
+    ]
+}
