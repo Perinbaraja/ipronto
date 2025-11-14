@@ -1,5 +1,5 @@
+import { fetchCategories } from "@/lib/api";
 import { CategoriesResponse } from "@/types/categories";
-import { fetchCategories } from "@/utils/api";
 import { useEffect, useState } from "react";
 
 const CategoriesLabel = () => {

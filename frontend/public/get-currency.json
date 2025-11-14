@@ -1,0 +1,862 @@
+[
+    {
+        "cur_key": "MVR",
+        "cur_value": "15.405",
+        "cur_name": "Maldivian rufiyaa"
+    },
+    {
+        "cur_key": "MWK",
+        "cur_value": "1734.058599",
+        "cur_name": "Malawian kwacha"
+    },
+    {
+        "cur_key": "MXN",
+        "cur_value": "18.351301",
+        "cur_name": "Mexican peso"
+    },
+    {
+        "cur_key": "MYR",
+        "cur_value": "4.1325",
+        "cur_name": "Malaysian ringgit"
+    },
+    {
+        "cur_key": "MZN",
+        "cur_value": "63.959999",
+        "cur_name": "Mozambican metical"
+    },
+    {
+        "cur_key": "SLE",
+        "cur_value": "23.375",
+        "cur_name": null
+    },
+    {
+        "cur_key": "XCG",
+        "cur_value": "1.801381",
+        "cur_name": null
+    },
+    {
+        "cur_key": "ZWG",
+        "cur_value": "26.407",
+        "cur_name": null
+    },
+    {
+        "cur_key": "AFN",
+        "cur_value": "65.653305",
+        "cur_name": "Afghan afghani"
+    },
+    {
+        "cur_key": "ALL",
+        "cur_value": "83.282762",
+        "cur_name": "Albanian lek"
+    },
+    {
+        "cur_key": "AMD",
+        "cur_value": "382.058762",
+        "cur_name": "Armenian dram"
+    },
+    {
+        "cur_key": "ANG",
+        "cur_value": "1.79",
+        "cur_name": "Netherlands Antillean Guilder"
+    },
+    {
+        "cur_key": "ARS",
+        "cur_value": "1408",
+        "cur_name": "Argentine peso"
+    },
+    {
+        "cur_key": "AUD",
+        "cur_value": "1.533434",
+        "cur_name": "Australian dollar"
+    },
+    {
+        "cur_key": "AWG",
+        "cur_value": "1.8",
+        "cur_name": "Aruban Florin"
+    },
+    {
+        "cur_key": "AZN",
+        "cur_value": "1.7",
+        "cur_name": "Azerbaijani manat"
+    },
+    {
+        "cur_key": "BMD",
+        "cur_value": "1",
+        "cur_name": "Bermudan Dollar"
+    },
+    {
+        "cur_key": "HNL",
+        "cur_value": "26.307924",
+        "cur_name": "Honduran lempira"
+    },
+    {
+        "cur_key": "HRK",
+        "cur_value": "6.48251",
+        "cur_name": "Croatian kuna"
+    },
+    {
+        "cur_key": "HTG",
+        "cur_value": "130.597574",
+        "cur_name": "Haitian gourde"
+    },
+    {
+        "cur_key": "HUF",
+        "cur_value": "330.994426",
+        "cur_name": "Hungarian forint"
+    },
+    {
+        "cur_key": "IDR",
+        "cur_value": "16704.627073",
+        "cur_name": "Indonesian rupiah"
+    },
+    {
+        "cur_key": "ILS",
+        "cur_value": "3.233765",
+        "cur_name": "Israeli new shekel"
+    },
+    {
+        "cur_key": "IMP",
+        "cur_value": "0.760174",
+        "cur_name": "Manx pound"
+    },
+    {
+        "cur_key": "INR",
+        "cur_value": "88.73954",
+        "cur_name": "Indian rupee"
+    },
+    {
+        "cur_key": "IQD",
+        "cur_value": "1309.640448",
+        "cur_name": "Iraqi dinar"
+    },
+    {
+        "cur_key": "IRR",
+        "cur_value": "42112.5",
+        "cur_name": "Iranian rial"
+    },
+    {
+        "cur_key": "JEP",
+        "cur_value": "0.760174",
+        "cur_name": "Jersey pound"
+    },
+    {
+        "cur_key": "JMD",
+        "cur_value": "160.376794",
+        "cur_name": "Jamaican dollar"
+    },
+    {
+        "cur_key": "JOD",
+        "cur_value": "0.709",
+        "cur_name": "Jordanian dinar"
+    },
+    {
+        "cur_key": "JPY",
+        "cur_value": "154.6941",
+        "cur_name": "Japanese yen"
+    },
+    {
+        "cur_key": "KES",
+        "cur_value": "129.35",
+        "cur_name": "Kenyan shilling"
+    },
+    {
+        "cur_key": "KGS",
+        "cur_value": "87.45",
+        "cur_name": "Kyrgyzstani som"
+    },
+    {
+        "cur_key": "KHR",
+        "cur_value": "3998.812569",
+        "cur_name": "Cambodian riel"
+    },
+    {
+        "cur_key": "KMF",
+        "cur_value": "424.999927",
+        "cur_name": "Comorian franc"
+    },
+    {
+        "cur_key": "KPW",
+        "cur_value": "900",
+        "cur_name": "North Korean won"
+    },
+    {
+        "cur_key": "KRW",
+        "cur_value": "1457.725527",
+        "cur_name": "South Korean won"
+    },
+    {
+        "cur_key": "KWD",
+        "cur_value": "0.306661",
+        "cur_name": "Kuwaiti dinar"
+    },
+    {
+        "cur_key": "KYD",
+        "cur_value": "0.832885",
+        "cur_name": "Cayman Islands Dollar"
+    },
+    {
+        "cur_key": "KZT",
+        "cur_value": "524.809545",
+        "cur_name": "Kazakhstani tenge"
+    },
+    {
+        "cur_key": "LAK",
+        "cur_value": "21694.542693",
+        "cur_name": "Lao kip"
+    },
+    {
+        "cur_key": "MRU",
+        "cur_value": "39.85",
+        "cur_name": "Mauritanian Ouguiya"
+    },
+    {
+        "cur_key": "MUR",
+        "cur_value": "45.650002",
+        "cur_name": "Mauritian rupee"
+    },
+    {
+        "cur_key": "PEN",
+        "cur_value": "3.368074",
+        "cur_name": "Peruvian sol"
+    },
+    {
+        "cur_key": "PGK",
+        "cur_value": "4.222981",
+        "cur_name": "Papua New Guinean kina"
+    },
+    {
+        "cur_key": "AOA",
+        "cur_value": "912.085",
+        "cur_name": "Angolan kwanza"
+    },
+    {
+        "cur_key": "BBD",
+        "cur_value": "2",
+        "cur_name": "Barbadian dollar"
+    },
+    {
+        "cur_key": "BDT",
+        "cur_value": "122.136138",
+        "cur_name": "Bangladeshi taka"
+    },
+    {
+        "cur_key": "BGN",
+        "cur_value": "1.68096",
+        "cur_name": "Bulgarian lev"
+    },
+    {
+        "cur_key": "BHD",
+        "cur_value": "0.377028",
+        "cur_name": "Bahraini dinar"
+    },
+    {
+        "cur_key": "BIF",
+        "cur_value": "2944.443784",
+        "cur_name": "Burundian franc"
+    },
+    {
+        "cur_key": "BOB",
+        "cur_value": "6.931234",
+        "cur_name": "Bolivian boliviano"
+    },
+    {
+        "cur_key": "BRL",
+        "cur_value": "5.3004",
+        "cur_name": "Brazilian real"
+    },
+    {
+        "cur_key": "BSD",
+        "cur_value": "1",
+        "cur_name": "Bahamian dollar"
+    },
+    {
+        "cur_key": "CRC",
+        "cur_value": "502.058227",
+        "cur_name": "Costa Rican colón"
+    },
+    {
+        "cur_key": "CUC",
+        "cur_value": "1",
+        "cur_name": "Cuban convertible peso"
+    },
+    {
+        "cur_key": "DJF",
+        "cur_value": "177.762377",
+        "cur_name": "Djiboutian franc"
+    },
+    {
+        "cur_key": "DKK",
+        "cur_value": "6.425846",
+        "cur_name": "Danish krone"
+    },
+    {
+        "cur_key": "DOP",
+        "cur_value": "64.148041",
+        "cur_name": "Dominican peso"
+    },
+    {
+        "cur_key": "EGP",
+        "cur_value": "47.1949",
+        "cur_name": "Egyptian pound"
+    },
+    {
+        "cur_key": "ERN",
+        "cur_value": "15",
+        "cur_name": "Eritrean nakfa"
+    },
+    {
+        "cur_key": "ETB",
+        "cur_value": "153.550419",
+        "cur_name": "Ethiopian birr"
+    },
+    {
+        "cur_key": "EUR",
+        "cur_value": "0.860476",
+        "cur_name": "Euro"
+    },
+    {
+        "cur_key": "FJD",
+        "cur_value": "2.27695",
+        "cur_name": "Fijian dollar"
+    },
+    {
+        "cur_key": "FKP",
+        "cur_value": "0.760174",
+        "cur_name": "Falkland Islands Pound"
+    },
+    {
+        "cur_key": "GBP",
+        "cur_value": "0.760174",
+        "cur_name": "British pound"
+    },
+    {
+        "cur_key": "GEL",
+        "cur_value": "2.7",
+        "cur_name": "Georgian lari"
+    },
+    {
+        "cur_key": "GGP",
+        "cur_value": "0.760174",
+        "cur_name": "Guernsey pound"
+    },
+    {
+        "cur_key": "GHS",
+        "cur_value": "10.960388",
+        "cur_name": "Ghanaian cedi"
+    },
+    {
+        "cur_key": "GIP",
+        "cur_value": "0.760174",
+        "cur_name": "Gibraltar pound"
+    },
+    {
+        "cur_key": "GMD",
+        "cur_value": "73.500003",
+        "cur_name": "Gambian dalasi"
+    },
+    {
+        "cur_key": "GNF",
+        "cur_value": "8679.597346",
+        "cur_name": "Guinean franc"
+    },
+    {
+        "cur_key": "GTQ",
+        "cur_value": "7.66177",
+        "cur_name": "Guatemalan quetzal"
+    },
+    {
+        "cur_key": "GYD",
+        "cur_value": "209.09957",
+        "cur_name": "Guyanese dollar"
+    },
+    {
+        "cur_key": "HKD",
+        "cur_value": "7.773343",
+        "cur_name": "Hong Kong Dollar"
+    },
+    {
+        "cur_key": "NAD",
+        "cur_value": "16.993881",
+        "cur_name": "Namibian dollar"
+    },
+    {
+        "cur_key": "NIO",
+        "cur_value": "36.776171",
+        "cur_name": "Nicaraguan córdoba"
+    },
+    {
+        "cur_key": "NOK",
+        "cur_value": "10.078957",
+        "cur_name": "Norwegian krone"
+    },
+    {
+        "cur_key": "NPR",
+        "cur_value": "141.783659",
+        "cur_name": "Nepalese rupee"
+    },
+    {
+        "cur_key": "NZD",
+        "cur_value": "1.761957",
+        "cur_name": "New Zealand dollar"
+    },
+    {
+        "cur_key": "OMR",
+        "cur_value": "0.384523",
+        "cur_name": "Omani rial"
+    },
+    {
+        "cur_key": "PAB",
+        "cur_value": "1",
+        "cur_name": "Panamanian balboa"
+    },
+    {
+        "cur_key": "AED",
+        "cur_value": "3.6725",
+        "cur_name": "United Arab Emirates dirham"
+    },
+    {
+        "cur_key": "BAM",
+        "cur_value": "1.68937",
+        "cur_name": "Bosnia and Herzegovina convertible mark"
+    },
+    {
+        "cur_key": "BND",
+        "cur_value": "1.300529",
+        "cur_name": "Brunei dollar"
+    },
+    {
+        "cur_key": "BTC",
+        "cur_value": "1.0327973E-5",
+        "cur_name": "Bitcoin"
+    },
+    {
+        "cur_key": "BTN",
+        "cur_value": "88.614553",
+        "cur_name": "Bhutanese ngultrum"
+    },
+    {
+        "cur_key": "BWP",
+        "cur_value": "14.187976",
+        "cur_name": "Botswana pula"
+    },
+    {
+        "cur_key": "BYN",
+        "cur_value": "3.409862",
+        "cur_name": "Belarusian ruble"
+    },
+    {
+        "cur_key": "BZD",
+        "cur_value": "2.010136",
+        "cur_name": "Belize dollar"
+    },
+    {
+        "cur_key": "CAD",
+        "cur_value": "1.403556",
+        "cur_name": "Canadian dollar"
+    },
+    {
+        "cur_key": "CDF",
+        "cur_value": "2130.689582",
+        "cur_name": "Congolese franc"
+    },
+    {
+        "cur_key": "CHF",
+        "cur_value": "0.792213",
+        "cur_name": "Swiss franc"
+    },
+    {
+        "cur_key": "CLF",
+        "cur_value": "0.023716",
+        "cur_name": "Chilean Unit of Account (UF)"
+    },
+    {
+        "cur_key": "CLP",
+        "cur_value": "925.925926",
+        "cur_name": "Chilean peso"
+    },
+    {
+        "cur_key": "CNH",
+        "cur_value": "7.098444",
+        "cur_name": "Chinese Yuan Renminbi"
+    },
+    {
+        "cur_key": "CNY",
+        "cur_value": "7.0984",
+        "cur_name": "Chinese yuan"
+    },
+    {
+        "cur_key": "COP",
+        "cur_value": "3702.284469",
+        "cur_name": "Colombian peso"
+    },
+    {
+        "cur_key": "CUP",
+        "cur_value": "25.75",
+        "cur_name": "Cuban peso"
+    },
+    {
+        "cur_key": "CVE",
+        "cur_value": "95.446429",
+        "cur_name": "Cape Verdean escudo"
+    },
+    {
+        "cur_key": "CZK",
+        "cur_value": "20.8126",
+        "cur_name": "Czech koruna"
+    },
+    {
+        "cur_key": "DZD",
+        "cur_value": "130.07694",
+        "cur_name": "Algerian dinar"
+    },
+    {
+        "cur_key": "ISK",
+        "cur_value": "126.49",
+        "cur_name": "Icelandic króna"
+    },
+    {
+        "cur_key": "LBP",
+        "cur_value": "89514.514811",
+        "cur_name": "Lebanese pound"
+    },
+    {
+        "cur_key": "LKR",
+        "cur_value": "304.582904",
+        "cur_name": "Sri Lankan rupee"
+    },
+    {
+        "cur_key": "LRD",
+        "cur_value": "182.40453",
+        "cur_name": "Liberian dollar"
+    },
+    {
+        "cur_key": "LSL",
+        "cur_value": "16.994541",
+        "cur_name": "Lesotho loti"
+    },
+    {
+        "cur_key": "LYD",
+        "cur_value": "5.456121",
+        "cur_name": "Libyan dinar"
+    },
+    {
+        "cur_key": "MAD",
+        "cur_value": "9.261882",
+        "cur_name": "Moroccan dirham"
+    },
+    {
+        "cur_key": "MDL",
+        "cur_value": "16.88058",
+        "cur_name": "Moldovan leu"
+    },
+    {
+        "cur_key": "MGA",
+        "cur_value": "4500",
+        "cur_name": "Malagasy ariary"
+    },
+    {
+        "cur_key": "MKD",
+        "cur_value": "52.985319",
+        "cur_name": "Macedonian denar"
+    },
+    {
+        "cur_key": "MMK",
+        "cur_value": "2099.7",
+        "cur_name": "Burmese kyat"
+    },
+    {
+        "cur_key": "MNT",
+        "cur_value": "3582.15",
+        "cur_name": "Mongolian tögrög"
+    },
+    {
+        "cur_key": "MOP",
+        "cur_value": "8.000499",
+        "cur_name": "Macanese Pataca"
+    },
+    {
+        "cur_key": "NGN",
+        "cur_value": "1442.08",
+        "cur_name": "Nigerian naira"
+    },
+    {
+        "cur_key": "PHP",
+        "cur_value": "59.044502",
+        "cur_name": "Philippine peso"
+    },
+    {
+        "cur_key": "PKR",
+        "cur_value": "281.774971",
+        "cur_name": "Pakistani rupee"
+    },
+    {
+        "cur_key": "PLN",
+        "cur_value": "3.637599",
+        "cur_name": "Polish zloty"
+    },
+    {
+        "cur_key": "PYG",
+        "cur_value": "7040.581668",
+        "cur_name": "Paraguayan guaraní"
+    },
+    {
+        "cur_key": "QAR",
+        "cur_value": "3.641408",
+        "cur_name": "Qatari riyal"
+    },
+    {
+        "cur_key": "RON",
+        "cur_value": "4.3739",
+        "cur_name": "Romanian leu"
+    },
+    {
+        "cur_key": "RSD",
+        "cur_value": "100.824179",
+        "cur_name": "Serbian dinar"
+    },
+    {
+        "cur_key": "RUB",
+        "cur_value": "80.976771",
+        "cur_name": "Russian ruble"
+    },
+    {
+        "cur_key": "RWF",
+        "cur_value": "1453.243766",
+        "cur_name": "Rwandan franc"
+    },
+    {
+        "cur_key": "SAR",
+        "cur_value": "3.749991",
+        "cur_name": "Saudi riyal"
+    },
+    {
+        "cur_key": "SBD",
+        "cur_value": "8.237372",
+        "cur_name": "Solomon Islands dollar"
+    },
+    {
+        "cur_key": "SCR",
+        "cur_value": "13.886857",
+        "cur_name": "Seychellois rupee"
+    },
+    {
+        "cur_key": "SDG",
+        "cur_value": "601",
+        "cur_name": "Sudanese pound"
+    },
+    {
+        "cur_key": "SEK",
+        "cur_value": "9.457298",
+        "cur_name": "Swedish krona"
+    },
+    {
+        "cur_key": "SGD",
+        "cur_value": "1.301673",
+        "cur_name": "Singapore dollar"
+    },
+    {
+        "cur_key": "SHP",
+        "cur_value": "0.760174",
+        "cur_name": "St. Helena Pound"
+    },
+    {
+        "cur_key": "SLL",
+        "cur_value": "20969.5",
+        "cur_name": "Sierra Leonean leone"
+    },
+    {
+        "cur_key": "SOS",
+        "cur_value": "570.692052",
+        "cur_name": "Somali shilling"
+    },
+    {
+        "cur_key": "SRD",
+        "cur_value": "38.589",
+        "cur_name": "Surinamese dollar"
+    },
+    {
+        "cur_key": "SSP",
+        "cur_value": "130.26",
+        "cur_name": "South Sudanese pound"
+    },
+    {
+        "cur_key": "STD",
+        "cur_value": "22281.8",
+        "cur_name": "São Tomé and Príncipe dobra"
+    },
+    {
+        "cur_key": "STN",
+        "cur_value": "21.332833",
+        "cur_name": "Sao Tomean Dobra"
+    },
+    {
+        "cur_key": "SVC",
+        "cur_value": "8.745635",
+        "cur_name": "Salvadoran Colón"
+    },
+    {
+        "cur_key": "SYP",
+        "cur_value": "13002",
+        "cur_name": "Syrian pound"
+    },
+    {
+        "cur_key": "VES",
+        "cur_value": "233.265587",
+        "cur_name": "Venezuelan bolívar"
+    },
+    {
+        "cur_key": "SZL",
+        "cur_value": "16.990751",
+        "cur_name": "Swazi lilangeni"
+    },
+    {
+        "cur_key": "THB",
+        "cur_value": "32.410999",
+        "cur_name": "Thai baht"
+    },
+    {
+        "cur_key": "TJS",
+        "cur_value": "9.254994",
+        "cur_name": "Tajikistani somoni"
+    },
+    {
+        "cur_key": "TMT",
+        "cur_value": "3.5",
+        "cur_name": "Turkmenistan manat"
+    },
+    {
+        "cur_key": "TND",
+        "cur_value": "2.9525",
+        "cur_name": "Tunisian dinar"
+    },
+    {
+        "cur_key": "TOP",
+        "cur_value": "2.40776",
+        "cur_name": "Tongan pa'anga"
+    },
+    {
+        "cur_key": "TRY",
+        "cur_value": "42.329915",
+        "cur_name": "Turkish lira"
+    },
+    {
+        "cur_key": "TTD",
+        "cur_value": "6.781462",
+        "cur_name": "Trinidad and Tobago dollar"
+    },
+    {
+        "cur_key": "TWD",
+        "cur_value": "31.153",
+        "cur_name": "New Taiwan dollar"
+    },
+    {
+        "cur_key": "TZS",
+        "cur_value": "2435",
+        "cur_name": "Tanzanian shilling"
+    },
+    {
+        "cur_key": "UAH",
+        "cur_value": "42.0333",
+        "cur_name": "Ukrainian hryvnia"
+    },
+    {
+        "cur_key": "UGX",
+        "cur_value": "3658.10065",
+        "cur_name": "Ugandan shilling"
+    },
+    {
+        "cur_key": "USD",
+        "cur_value": "1",
+        "cur_name": "United States dollar"
+    },
+    {
+        "cur_key": "UYU",
+        "cur_value": "39.783693",
+        "cur_name": "Uruguayan peso"
+    },
+    {
+        "cur_key": "UZS",
+        "cur_value": "11982.434061",
+        "cur_name": "Uzbekistani som"
+    },
+    {
+        "cur_key": "VND",
+        "cur_value": "26353.933782",
+        "cur_name": "Vietnamese dong"
+    },
+    {
+        "cur_key": "VUV",
+        "cur_value": "122.16",
+        "cur_name": "Vanuatu vatu"
+    },
+    {
+        "cur_key": "WST",
+        "cur_value": "2.816",
+        "cur_name": "Samoan tala"
+    },
+    {
+        "cur_key": "XAF",
+        "cur_value": "564.434991",
+        "cur_name": "Central African CFA franc"
+    },
+    {
+        "cur_key": "XAG",
+        "cur_value": "0.01896363",
+        "cur_name": "Silver Ounce"
+    },
+    {
+        "cur_key": "XAU",
+        "cur_value": "0.00023985",
+        "cur_name": "Gold Ounce"
+    },
+    {
+        "cur_key": "XCD",
+        "cur_value": "2.70255",
+        "cur_name": "East Caribbean dollar"
+    },
+    {
+        "cur_key": "XDR",
+        "cur_value": "0.704773",
+        "cur_name": "Special drawing rights"
+    },
+    {
+        "cur_key": "XOF",
+        "cur_value": "564.434991",
+        "cur_name": "West African CFA franc"
+    },
+    {
+        "cur_key": "XPD",
+        "cur_value": "0.00070222",
+        "cur_name": "Palladium Ounce"
+    },
+    {
+        "cur_key": "XPF",
+        "cur_value": "102.682052",
+        "cur_name": "CFP Franc"
+    },
+    {
+        "cur_key": "XPT",
+        "cur_value": "0.00064104",
+        "cur_name": "Platinum Ounce"
+    },
+    {
+        "cur_key": "YER",
+        "cur_value": "238.499969",
+        "cur_name": "Yemeni rial"
+    },
+    {
+        "cur_key": "ZAR",
+        "cur_value": "17.101147",
+        "cur_name": "South African rand"
+    },
+    {
+        "cur_key": "ZMW",
+        "cur_value": "22.412629",
+        "cur_name": "Zambian kwacha"
+    },
+    {
+        "cur_key": "ZWL",
+        "cur_value": "322",
+        "cur_name": "Zimbabwean dollar"
+    }
+]

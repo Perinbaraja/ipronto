@@ -1,7 +1,14 @@
+"use client";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import React from "react";
 
 type Props = {};
+
+const CurrencyRatesDropDown = dynamic(
+  () => import("./get-currency-rates"),
+  { ssr: false }
+);
 
 const FooterComponent = (props: Props) => {
   return (
@@ -31,6 +38,10 @@ const FooterComponent = (props: Props) => {
               <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z" />
             </svg>
             <span>Currency:</span>
+          </div>
+
+          <div className="currency-rate-dropdown px-2 py-2">
+           <CurrencyRatesDropDown/>
           </div>
 
           <Link href={""} className="text-[#ffc813] font-semibold text-lg">

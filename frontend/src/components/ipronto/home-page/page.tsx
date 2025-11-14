@@ -1,9 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Carousel from "../carousel/index";
-import { fetchEvents } from "@/utils/api";
 import { ApiResponse } from "@/types/events";
 import HomeHeaderSection from "./header-section";
+import MapSection from "./map-section";
+import { fetchEvents } from "@/lib/api";
 
 const HomePageCompoenent = () => {
   const [categories, setCategories] = useState<ApiResponse | null>(null);
@@ -21,6 +22,9 @@ const HomePageCompoenent = () => {
     <div>
       <div className="header-section">
         <HomeHeaderSection/>
+      </div>
+      <div className="map-section">
+        {/* <MapSection/> */}
       </div>
    <div className="categories-data bg-[#f5f5f5]">
        {categories &&
