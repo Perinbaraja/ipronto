@@ -10,6 +10,18 @@ interface CarouselProps {
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(5);
+  const [showExploreMore, setShowExploreMore] = useState(false);
+
+  useEffect(()=>{
+    if(currentIndex + visibleCount >= items.length){
+      const timer = setTimeout(()=>{
+        setShowExploreMore(true);
+      },300)
+      return ()=> clearTimeout(timer);
+    }else{
+      setShowExploreMore(false);
+    }
+  },[currentIndex,visibleCount,items.length])
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,8 +50,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
   };
 
   const isAtStart = currentIndex === 0;
-  const isAtEnd = currentIndex >= Math.max(items.length - visibleCount, 0);
-
+  const isAtEnd = currentIndex >= items.length - visibleCount;
   return (
     <div className="relative w-full mx-auto py-4 px-4 overflow-hidden">
       {/* Left Button */}
@@ -163,7 +174,11 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                         <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
                       </svg>
-                      <p className="text-[15px]">{formatDateTime(event.startTime, { includeComma: true })}</p>
+                      <p className="text-[15px]">
+                        {formatDateTime(event.startTime, {
+                          includeComma: true,
+                        })}
+                      </p>
                     </div>
                     <div className="text-gray-500 flex items-start gap-1 text-sm mt-1 h-6 leading-snug ">
                       <svg
@@ -179,23 +194,28 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                       <span className="wrap-break-word line-clamp-2">
                         {event?.address && event.destination_name[0] ? (
                           <>
-                          {event.destination_name[0]},<br />
-                        {event.address}
+                            {event.destination_name[0]},<br />
+                            {event.address}
                           </>
-                        ):(
-                          <>
-                          {event.address}
-                          </>
+                        ) : (
+                          <>{event.address}</>
                         )}
                       </span>
                     </div>
 
                     <div className="pt-2 text-sm text-gray-600 font-medium">
                       <img
-                      src="https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/pronto-logo/ProntoliveNew.png"
-                      alt="Organizer Logo"
-                      className="h-6 object-contain"
-                    />
+                        src={event.source==="rezdy" 
+                          ? "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/pronto-logo/ProntoliveNew.png"
+                          :event.source ==="TEvo" 
+                          ? "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/pronto-logo/Pronto-new-logo.png"
+                          : event.source === "viator" 
+                          ? "/logo/viator_logo.png" 
+                          : "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/pronto-logo/Pronto-new-logo.png"
+                        }
+                        alt="Organizer Logo"
+                        className={`object-contain ${event.source==="viator" ? "h-3" : "h-5"}`}
+                      />
                     </div>
                   </div>
                 </div>
@@ -206,7 +226,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       </div>
 
       {/* Right Button / Explore More */}
-      {!isAtEnd ? (
+      {!showExploreMore ? (
         <button
           onClick={nextSlide}
           className="absolute right-0 top-1/2 -translate-y-1/2 bg-black hover:bg-[#ffc813] border hover:border-black text-white rounded-full p-3 z-10 shadow hover:scale-105 transition cursor-pointer"
@@ -226,7 +246,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
           </svg>
         </button>
       ) : (
-        <div className="absolute right-[70px] text-3xl top-[50%] -translate-y-1/2 text-white/95 font-bold cursor-pointer">
+        <div className="absolute right-[70px] text-3xl top-[45%] -translate-y-1/2 text-white/95 font-bold cursor-pointer">
           Explore More
         </div>
       )}
