@@ -12,16 +12,16 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
   const [visibleCount, setVisibleCount] = useState(5);
   const [showExploreMore, setShowExploreMore] = useState(false);
 
-  useEffect(()=>{
-    if(currentIndex + visibleCount >= items.length){
-      const timer = setTimeout(()=>{
+  useEffect(() => {
+    if (currentIndex + visibleCount >= items.length) {
+      const timer = setTimeout(() => {
         setShowExploreMore(true);
-      },300)
-      return ()=> clearTimeout(timer);
-    }else{
+      }, 300);
+      return () => clearTimeout(timer);
+    } else {
       setShowExploreMore(false);
     }
-  },[currentIndex,visibleCount,items.length])
+  }, [currentIndex, visibleCount, items.length]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,6 +42,24 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       const newIndex = Math.min(currentIndex + visibleCount, lastIndex);
       setCurrentIndex(newIndex);
     }
+  };
+
+  // Helper function to get valid image URL
+  const getValidImageUrl = (imageUrl: string | null | undefined) => {
+    const defaultImage =
+      "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/sub-categories/New/Other%2B2.png";
+
+    if (
+      !imageUrl ||
+      imageUrl === "null" ||
+      imageUrl === "undefined" ||
+      imageUrl === "NULL" ||
+      imageUrl.trim() === ""
+    ) {
+      return defaultImage;
+    }
+
+    return imageUrl;
   };
 
   const prevSlide = () => {
@@ -85,12 +103,12 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
           }}
         >
           {items.map((event) => {
-            const isLastItem = event.id === items[items.length - 1].id;
+            const isLastItem = items.length >= 20 && event === items[19];
             return (
               <div
                 key={event.id}
                 className="px-2 box-border cursor-pointer"
-                style={{ width: `${100 / visibleCount}%` }}
+                style={{ width: "450px" }}
               >
                 <div
                   className={` p-1.5 rounded-xl shadow hover:shadow-xl transition overflow-hidden ${
@@ -99,11 +117,9 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                 >
                   <div className="relative h-56 w-full overflow-hidden rounded-t-xl">
                     <img
-                      src={event.images[0]}
+                      src={getValidImageUrl(event.images[0])}
                       alt={event.name}
-                      className={`h-full w-full object-cover rounded-md transition-transform duration-500 ease-in-out ${
-                        isLastItem ? "" : "hover:scale-130"
-                      }`}
+                      className="h-full w-full object-cover rounded-md transition-transform duration-500 hover:scale-105"
                     />
                     {/* Top-right icons */}
                     <div className="absolute top-2 right-2 flex flex-col gap-2">
@@ -205,16 +221,19 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 
                     <div className="pt-2 text-sm text-gray-600 font-medium">
                       <img
-                        src={event.source==="rezdy" 
-                          ? "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/pronto-logo/ProntoliveNew.png"
-                          :event.source ==="TEvo" 
-                          ? "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/pronto-logo/Pronto-new-logo.png"
-                          : event.source === "viator" 
-                          ? "/logo/viator_logo.png" 
-                          : "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/pronto-logo/Pronto-new-logo.png"
+                        src={
+                          event.source === "rezdy"
+                            ? "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/pronto-logo/ProntoliveNew.png"
+                            : event.source === "TEvo"
+                            ? "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/pronto-logo/Pronto-new-logo.png"
+                            : event.source === "viator"
+                            ? "/logo/viator_logo.png"
+                            : "https://public-pronto.s3.us-west-2.amazonaws.com/dev-assets/pronto-logo/Pronto-new-logo.png"
                         }
                         alt="Organizer Logo"
-                        className={`object-contain ${event.source==="viator" ? "h-3" : "h-5"}`}
+                        className={`object-contain ${
+                          event.source === "viator" ? "h-3" : "h-5"
+                        }`}
                       />
                     </div>
                   </div>
@@ -226,7 +245,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       </div>
 
       {/* Right Button / Explore More */}
-      {!showExploreMore ? (
+      {!showExploreMore && (
         <button
           onClick={nextSlide}
           className="absolute right-0 top-1/2 -translate-y-1/2 bg-black hover:bg-[#ffc813] border hover:border-black text-white rounded-full p-3 z-10 shadow hover:scale-105 transition cursor-pointer"
@@ -245,7 +264,8 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
             />
           </svg>
         </button>
-      ) : (
+      )}
+      {items.length >= 20 && showExploreMore && (
         <div className="absolute right-[70px] text-3xl top-[45%] -translate-y-1/2 text-white/95 font-bold cursor-pointer">
           Explore More
         </div>
