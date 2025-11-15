@@ -11,7 +11,7 @@ const app = express();
 // CORS with simple options (adjust origins as needed)
 app.use(cors({ origin: process.env.CORS_ORIGIN ?? '*', credentials: true }));
 app.use(express.json());
-app.use("/events", eventsRoutes);
+app.use("/api", eventsRoutes);
 // Test route
 app.get('/', (req, res) => {
   res.send('🚀 Backend running successfully!');

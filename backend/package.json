@@ -2,13 +2,12 @@
   "name": "ipronto-backend",
   "version": "0.1.0",
   "private": true,
- "main": "dist/server.js",
-"scripts": {
-  "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-  "build": "tsc -p tsconfig.json",
-  "start": "node dist/server.js"
-}
-,
+  "main": "dist/server.js",
+  "scripts": {
+     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.80.0",
     "cors": "^2.8.5",
@@ -19,6 +18,8 @@
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.17",
     "@types/node": "^20.4.2",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.1.6"
   }
