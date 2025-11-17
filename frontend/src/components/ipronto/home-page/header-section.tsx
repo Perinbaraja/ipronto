@@ -6,7 +6,7 @@ type Props = {};
 
 const HomeHeaderSection = (props: Props) => {
   return (
-    <div className="px-4">
+    <div className="px-4 py-6">
       <div className="title-section text-center">
         <p className="text-xl font-black py-1">
           Book Leisure & Entertainment Experience
@@ -18,10 +18,10 @@ const HomeHeaderSection = (props: Props) => {
         </p>
       </div>
       <div className="search-bar-section">
-        <SearchBarSection/>
+        <SearchBarSection />
       </div>
       <div className="categories-label">
-        <CategoriesLabel/>
+        <CategoriesLabel />
       </div>
     </div>
   );

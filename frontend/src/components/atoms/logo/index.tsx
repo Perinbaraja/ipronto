@@ -13,7 +13,7 @@ const Logo = (props: Props) => {
             alt='IPronto Logo'
             width={300}
             height={85}
-            className='object-cover h-[85px]'
+            className='object-cover h-[75px] lg:h-[85px]'
         />
         </Link>
     </div>

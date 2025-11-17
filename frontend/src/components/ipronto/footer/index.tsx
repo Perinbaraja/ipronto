@@ -5,17 +5,16 @@ import React from "react";
 
 type Props = {};
 
-const CurrencyRatesDropDown = dynamic(
-  () => import("./get-currency-rates"),
-  { ssr: false }
-);
+const CurrencyRatesDropDown = dynamic(() => import("./get-currency-rates"), {
+  ssr: false,
+});
 
 const FooterComponent = (props: Props) => {
   return (
     <div className="bg-[#040b17] text-[#838383] pt-20 pb-10 px-8">
-      <div className="flex gap-10">
+      <div className="flex flex-col lg:flex-row gap-10">
         {/* Left Column */}
-        <div className="border-r pr-8 w-[350px]">
+        <div className="border-0 lg:border-r pr-8 w-[350px]">
           <img
             src="https://s3.us-west-2.amazonaws.com/www.yopronto.com/Pronto+Experiences+m+%2B+s+black+transparent.png"
             alt="Logo"
@@ -41,7 +40,7 @@ const FooterComponent = (props: Props) => {
           </div>
 
           <div className="currency-rate-dropdown px-2 py-2">
-           <CurrencyRatesDropDown/>
+            <CurrencyRatesDropDown />
           </div>
 
           <Link href={""} className="text-[#ffc813] font-semibold text-lg">
@@ -50,7 +49,7 @@ const FooterComponent = (props: Props) => {
         </div>
 
         {/* Right Columns */}
-        <div className="flex flex-1 justify-between">
+        <div className="flex flex-col lg:flex-1 justify-between">
           {/* About Pronto */}
           <div className="flex flex-col gap-2">
             <h3 className="text-[22px] font-semibold text-white">
@@ -173,9 +172,9 @@ const FooterComponent = (props: Props) => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-gray-700 mt-8 pt-4 text-sm text-[#ffc813] flex flex-wrap gap-4">
+      <div className="border-t border-gray-700 mt-8 pt-4 text-sm text-[#ffc813] flex flex-col lg:flex-wrap gap-4">
         <span>Pronto Rel. 12.1.3</span>
-        <span className="text-center flex-1 text-[#838383] text-lg">
+        <span className="text-center flex-1 text-[#838383] text-sm lg:text-lg">
           Copyright © 2017 - 2025 -{" "}
           <Link href={""} className="text-[#ffc813]">
             ProntoExperiences.com

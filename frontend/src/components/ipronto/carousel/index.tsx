@@ -25,7 +25,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) setVisibleCount(1);
+      if (window.innerWidth < 640) setVisibleCount(2);
       else if (window.innerWidth < 1024) setVisibleCount(3);
       else setVisibleCount(5);
     };
@@ -70,7 +70,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
   const isAtStart = currentIndex === 0;
   const isAtEnd = currentIndex >= items.length - visibleCount;
   return (
-    <div className="relative w-full mx-auto py-4 px-4 overflow-hidden">
+    <div className="relative w-full mx-auto sm:py-4 px-1 sm:px-4 overflow-hidden">
       {/* Left Button */}
       {!isAtStart && (
         <button
@@ -107,15 +107,14 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
             return (
               <div
                 key={event.id}
-                className="px-2 box-border cursor-pointer"
-                style={{ width: "450px" }}
+                className="px-2 box-border cursor-pointer w-[49vw] sm:w-[45vw] lg:w-[300px] h-[350px] sm:h-auto"
               >
                 <div
                   className={` p-1.5 rounded-xl shadow hover:shadow-xl transition overflow-hidden ${
                     isLastItem ? "bg-gray-300" : "bg-white"
                   }`}
                 >
-                  <div className="relative h-56 w-full overflow-hidden rounded-t-xl">
+                  <div className="relative h-32 sm:h-56 w-full overflow-hidden rounded-t-xl">
                     <img
                       src={getValidImageUrl(event.images[0])}
                       alt={event.name}
@@ -148,7 +147,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                       </button>
                     </div>
 
-                    <div className="absolute top-0 left-5 flex flex-col items-center justify-center w-[50px] h-[60px] text-center text-white rounded-b-md border border-[#01070f] z-[9] bg-gradient-to-b from-[#ffc813] to-[#01070f]">
+                    <div className="absolute top-0 left-2 sm:left-5 flex flex-col items-center justify-center w-[40px] h-[50px] sm:w-[50px] sm:h-[60px] text-center text-white rounded-b-md border border-[#01070f] z-[9] bg-gradient-to-b from-[#ffc813] to-[#01070f]">
                       {(() => {
                         const formattedDate = formatDateTime(event.date, {
                           includeComma: false,
@@ -157,10 +156,10 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 
                         return (
                           <div className="flex flex-col items-center leading-tight">
-                            <span className="text-[26px]  font-bold">
+                            <span className="text-[20px] sm:text-[26px]  font-bold">
                               {day}
                             </span>
-                            <span className="text-[14px] font-semibold uppercase">
+                            <span className="text-[10px] sm:text-[14px] font-semibold uppercase">
                               {month}
                             </span>
                           </div>
@@ -169,28 +168,31 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                     </div>
                   </div>
 
-                  <div className="p-4 space-y-2">
-                    <h3 className="text-sm font-semibold line-clamp-1">
+                  <div className="p-2 sm:p-4 space-y-2">
+                    <h3 className="text-[12px] sm:text-sm font-semibold line-clamp-2 h-[38px] sm:line-clamp-1">
                       {event.name}
                     </h3>
-                    <p className="text-[#297a18] font-bold text-[16px]">
+                    <p className="text-[#297a18] font-bold text-[16px] hidden sm:block">
                       ${event.pickupPointPriceRange.minpickupprice} - $
                       {event.pickupPointPriceRange.maxpickupprice}
                     </p>
+                    <p className="text-[#297a18] font-bold text-[12px] sm:hidden">
+                      MX${event?.pickupPointPriceRange?.maxpickupprice}
+                    </p>
                     <hr className="text-gray-300" />
-                    <div className="text-gray-500 text-xs flex items-center gap-1 font-[Lato, sans-serif]">
+                    <div className="text-gray-500 text-xs flex items-center gap-2 sm:gap-1 font-[Lato, sans-serif]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="12"
                         height="12"
                         fill="text-gray-500"
-                        className="bi bi-clock"
+                        className="bi bi-clock w-4 h-4 sm:w-3 sm:h-3"
                         viewBox="0 0 16 16"
                       >
                         <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
                       </svg>
-                      <p className="text-[15px]">
+                      <p className="text-[10px] sm:text-[15px]">
                         {formatDateTime(event.startTime, {
                           includeComma: true,
                         })}
@@ -207,7 +209,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                       >
                         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                       </svg>
-                      <span className="wrap-break-word line-clamp-2">
+                      <span className="wrap-break-word text-[10px] line-clamp-2">
                         {event?.address && event.destination_name[0] ? (
                           <>
                             {event.destination_name[0]},<br />
@@ -219,7 +221,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                       </span>
                     </div>
 
-                    <div className="pt-2 text-sm text-gray-600 font-medium">
+                    <div className="sm:pt-2 text-sm text-gray-600 font-medium">
                       <img
                         src={
                           event.source === "rezdy"
@@ -266,7 +268,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
         </button>
       )}
       {items.length >= 20 && showExploreMore && (
-        <div className="absolute right-[70px] text-3xl top-[45%] -translate-y-1/2 text-white/95 font-bold cursor-pointer">
+        <div className="absolute right-[50px] top-[30%]  md:right-[70px] text-xl md:text-3xl md:top-[45%] -translate-y-1/2 text-white/95 font-bold cursor-pointer">
           Explore More
         </div>
       )}

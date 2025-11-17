@@ -1,10 +1,13 @@
+"use client";
 import Logo from "@/components/atoms/logo";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 type Props = {};
 
 const Header = (props: Props) => {
+  const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
+
   const navLinks = [
     { name: "About Us", href: "/" },
     {
@@ -32,6 +35,9 @@ const Header = (props: Props) => {
     },
   ];
 
+  const toggleMobileMenu = () => {
+    setIsShowMobileMenu(!isShowMobileMenu);
+  };
   const ratingStars = (rating: number) => {
     const stars = [];
     const fullStars = Math.floor(rating); // 4 for 4.5
@@ -76,12 +82,12 @@ const Header = (props: Props) => {
   };
 
   return (
-    <div className="bg-black p-2">
+    <div className="bg-black p-2 relative">
       <div className="main-header flex items-center justify-between max-w-7xl mx-auto text-[#ffc813]">
         <div className="logo">
           <Logo />
         </div>
-        <div className="navLinks flex items-center justify-center gap-6 text-sm font-medium">
+        <div className="navLinks hidden lg:flex items-center justify-center gap-6 text-sm font-medium sm-hidden">
           {navLinks.map((link, i) => (
             <Link
               key={i}
@@ -118,6 +124,75 @@ const Header = (props: Props) => {
             </Link>
           </div>
         </div>
+        {/* Mobile Nav */}
+        <div>
+          <button className="text-white" onClick={toggleMobileMenu}>
+            <i className="fa-solid fa-bars text-3xl"></i>
+          </button>
+        </div>
+        {/* Overlay */}
+        {isShowMobileMenu && (
+          <div className="fixed inset-0 bg-black/50 z-10"></div>
+        )}
+        {isShowMobileMenu && (
+          <div className="fixed bg-black h-screen top-0 right-0 w-[300px] md:w-[400px] p-4 flex flex-col gap-6 z-10 sm-hidden">
+            <div className="p-2 flex items-center justify-between">
+              <h3 className="text-white">Menu</h3>
+              <button className="text-white" onClick={toggleMobileMenu}>
+                <i className="fa-solid fa-xmark text-sm"></i>
+              </button>
+            </div>
+            <div className="w-full h-[1px] bg-gray-500"></div>
+            <div className="nav-items">
+              {navLinks.map((link, i) => (
+                <Link
+                  key={i}
+                  href={link.href}
+                  className="flex gap-1 mb-3 transition"
+                >
+                  {link.image && (
+                    <img
+                      src={link.image}
+                      alt={link.name}
+                      className="h-8 w-8 object-contain"
+                    />
+                  )}
+                  {link.icon && link.icon}
+                  <p className=" hover:text-white text-[12px]">{link.name}</p>
+                </Link>
+              ))}
+              <div className="flex flex-col gap-1 p-4">
+                {ratingStars(4.5)}
+                <p className="text-xs">Rating:4.9</p>
+              </div>
+              <div className="w-full h-[1px] bg-gray-500"></div>
+            </div>
+            <div className="text-[12px] text-[#ffc813] p-2 flex flex-col gap-4">
+              <div className="flex items-center gap-1">
+                <i className="fa-solid fa-right-to-bracket text-sm"></i>
+                <Link href={"/login"} className="block hover:text-gray-300 ">
+                  Login
+                </Link>
+              </div>
+              <div className="flex items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-person-fill-add"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                  <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4" />
+                </svg>
+                <Link href={"/login"} className="block hover:text-gray-300 ">
+                  Register
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

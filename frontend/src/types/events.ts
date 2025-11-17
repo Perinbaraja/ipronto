@@ -52,3 +52,20 @@ export interface CategoriesData {
 export interface ApiResponse {
   categories: CategoriesData;
 }
+
+export interface SearchAllPayload{
+  city?: string;
+  location?: string;
+  nearBy?: string;
+  searchText?: string;
+  fromDate?: string;
+  landingPage?: string;
+  categories?: string[]; 
+  destinationId?: string;
+  limit?: number;
+  page?: number;
+  bounds?: string;
+  priceRange?: string;
+  createdSince?: string;
+  upcomingEvents?: number;
+}

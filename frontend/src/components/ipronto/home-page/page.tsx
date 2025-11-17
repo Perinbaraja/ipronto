@@ -12,8 +12,26 @@ const HomePageComponent = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const payload = {
+    city: "",
+    location: "",
+    nearBy: "",
+    searchText: "",
+    fromDate: "",
+    toDate: "",
+    landingPage: "",
+    categories: [],
+    destinationId: "",
+    limit: 20,
+    page: 0,
+    bounds: "",
+    priceRange: "",
+    createdSince: "",
+    upcomingEvents: 7,
+  };
+
   useEffect(() => {
-    fetchEvents()
+    fetchEvents(payload)
       .then((data: ApiResponse) => {
         console.log("Fetched events on home page:", data);
         setCategories(data);
@@ -24,11 +42,13 @@ const HomePageComponent = () => {
         setError("Failed to load events");
         setLoading(false);
       });
-  }, []); 
+  }, []);
   if (loading) {
-    return <div className="p-4 text-center">
-      <Loader/>
-    </div>;
+    return (
+      <div className="p-4 text-center">
+        <Loader />
+      </div>
+    );
   }
 
   if (error) {
@@ -44,21 +64,19 @@ const HomePageComponent = () => {
       <div className="header-section">
         <HomeHeaderSection />
       </div>
-      <div className="map-section">
-        {/* <MapSection/> */}
-      </div>
+      <div className="map-section">{/* <MapSection/> */}</div>
       <div className="categories-data bg-[#f5f5f5]">
         {Object.entries(categories).map(([categoryName, categoryData]: any) => {
           const allItems = categoryData?.searchResult || [];
           const limitedItems = allItems.slice(0, 20);
-          
+
           if (allItems.length === 0) {
             return null; // Skip empty categories
           }
 
           return (
             <React.Fragment key={categoryName}>
-              <div className="p-4 mt-6">
+              <div className="p-2 sm:p-4 sm:mt-6">
                 <h2 className="text-2xl font-semibold">
                   {categoryName.charAt(0).toUpperCase() + categoryName.slice(1)}
                 </h2>
