@@ -59,6 +59,7 @@ export interface SearchAllPayload{
   nearBy?: string;
   searchText?: string;
   fromDate?: string;
+  toDate?: string;
   landingPage?: string;
   categories?: string[]; 
   destinationId?: string;

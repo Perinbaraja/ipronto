@@ -125,7 +125,7 @@ const Header = (props: Props) => {
           </div>
         </div>
         {/* Mobile Nav */}
-        <div>
+        <div className="lg:hidden block">
           <button className="text-white" onClick={toggleMobileMenu}>
             <i className="fa-solid fa-bars text-3xl"></i>
           </button>

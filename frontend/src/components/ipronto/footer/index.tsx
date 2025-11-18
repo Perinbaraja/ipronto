@@ -49,7 +49,7 @@ const FooterComponent = (props: Props) => {
         </div>
 
         {/* Right Columns */}
-        <div className="flex flex-col lg:flex-1 justify-between">
+        <div className="flex flex-col lg:flex-row lg:flex-1 justify-between">
           {/* About Pronto */}
           <div className="flex flex-col gap-2">
             <h3 className="text-[22px] font-semibold text-white">

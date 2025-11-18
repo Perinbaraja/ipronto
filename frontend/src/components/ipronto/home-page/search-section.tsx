@@ -1,9 +1,12 @@
 import { url } from "inspector";
-import React from "react";
+import React, { useState } from "react";
 
 type Props = {};
 
 const SearchBarSection = (props: Props) => {
+
+  const [searchEvent, setSearchEvent] = useState<string>("");
+  
   return (
     <div className="px-4 py-6">
       <form
@@ -14,6 +17,8 @@ const SearchBarSection = (props: Props) => {
           <input
             type="text"
             placeholder="Event name, Perfomer, Destinations, Tags"
+            value={searchEvent}
+            onChange={(e) => setSearchEvent(e.target.value)}
             className="text-[16px] h-11 border outline-none border-[#efefef] rounded-md min-w-[350px] md:min-w-[360px] lg:min-w-[400px] pt-2 pr-5 pb-[10px] pl-[52px]"
             style={{
               background: "#f3f8ff",

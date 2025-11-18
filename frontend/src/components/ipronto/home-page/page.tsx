@@ -3,34 +3,23 @@ import React, { useEffect, useState } from "react";
 import Carousel from "../carousel/index";
 import { ApiResponse } from "@/types/events";
 import HomeHeaderSection from "./header-section";
-import MapSection from "./map-section";
 import { fetchEvents } from "@/lib/api";
 import Loader from "@/components/molecules/loader";
+import { buildSearchPayload } from "@/utils/searchPayload";
+
+interface onSearchPayload {
+  city?: string;
+  searchText?: string;
+  categories?: string[];
+}
 
 const HomePageComponent = () => {
   const [categories, setCategories] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const payload = {
-    city: "",
-    location: "",
-    nearBy: "",
-    searchText: "",
-    fromDate: "",
-    toDate: "",
-    landingPage: "",
-    categories: [],
-    destinationId: "",
-    limit: 20,
-    page: 0,
-    bounds: "",
-    priceRange: "",
-    createdSince: "",
-    upcomingEvents: 7,
-  };
-
   useEffect(() => {
+    const payload = buildSearchPayload({});
     fetchEvents(payload)
       .then((data: ApiResponse) => {
         console.log("Fetched events on home page:", data);
